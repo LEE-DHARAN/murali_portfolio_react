@@ -7,7 +7,9 @@ function About() {
                 <h2 className="section-title">About <span>Me</span></h2>
                 <div className="about-content">
                     <div className="about-img">
-                        <img src="https://via.placeholder.com/500x500" alt="Murali" />
+                        <img src="/pic.jpg" alt="Murali" className="profile-pic" />
+
+
                     </div>
                     <div className="about-text">
                         <h3>Full-Stack Developer</h3>

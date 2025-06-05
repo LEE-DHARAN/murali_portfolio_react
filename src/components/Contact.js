@@ -28,13 +28,15 @@ function Contact() {
                         </div>
                     </div>
                     <div className="contact-form">
-                        <form>
-                            <input type="text" placeholder="Your Name" required />
-                            <input type="email" placeholder="Your Email" required />
-                            <input type="text" placeholder="Subject" />
-                            <textarea placeholder="Your Message" required></textarea>
+                        <form action="https://formsubmit.co/muralidhawan@gmail.com" method="POST">
+                            <input type="text" name="name" placeholder="Your Name" required />
+                            <input type="email" name="email" placeholder="Your Email" required />
+                            <input type="text" name="subject" placeholder="Subject" />
+                            <textarea name="message" placeholder="Your Message" required></textarea>
+                            <input type="hidden" name="_captcha" value="false" />
                             <button type="submit" className="btn">Send Message</button>
                         </form>
+
                     </div>
                 </div>
             </div>
