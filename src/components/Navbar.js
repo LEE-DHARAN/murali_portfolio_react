@@ -26,7 +26,7 @@ function Navbar() {
         <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
             <div className="container nav-container">
                 <a href="#home" className="logo">
-                    Murali<span>.</span>
+                    Murali Dharan<span>.</span>
                 </a>
 
              
