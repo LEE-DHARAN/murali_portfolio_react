@@ -29,9 +29,7 @@ function Navbar() {
                     Murali<span>.</span>
                 </a>
 
-                <button className="mobile-menu-btn" onClick={toggleMenu}>
-                    {isOpen ? <FaTimes /> : <FaBars />}
-                </button>
+             
 
                 <ul className={`nav-links ${isOpen ? 'active' : ''}`}>
                     <li><a href="#home" onClick={toggleMenu}>Home</a></li>
