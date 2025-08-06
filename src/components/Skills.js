@@ -8,7 +8,7 @@ function Skills() {
         { icon: <i className="fab fa-react"></i>, name: 'React', description: 'Hooks, Context API' },
         { icon: <i className="fab fa-node-js"></i>, name: 'Node.js', description: 'Express, REST APIs' },
         { icon: <i className="fab fa-python"></i>, name: 'Python', description: 'Django' },
-        { icon: <i className="fas fa-database"></i>, name: 'Databases', description: 'MySQL,MongoDB' },
+        { icon: <i className="fas fa-database"></i>, name: 'Databases', description: 'MySQL, MongoDB' },
     ];
 
     return (

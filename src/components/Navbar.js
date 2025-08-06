@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
+import { FaGithub } from 'react-icons/fa';
+
 
 function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
@@ -39,6 +41,17 @@ function Navbar() {
                     <li><a href="#experience" onClick={toggleMenu}>Experience</a></li>
                     <li><a href="#blog" onClick={toggleMenu}>Blog</a></li>
                     <li><a href="#contact" onClick={toggleMenu}>Contact</a></li>
+                    <li>
+                        <a
+                            href="https://github.com/LEE-DHARAN"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            onClick={toggleMenu}
+                        >
+                            <FaGithub size={25} /> {/* You can adjust size */}
+                        </a>
+                    </li>
+
                 </ul>
             </div>
         </nav>
