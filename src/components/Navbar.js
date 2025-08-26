@@ -31,7 +31,10 @@ function Navbar() {
                     Murali Dharan<span>.</span>
                 </a>
 
-             
+               {/* Hamburger Menu Button */}
+  <div className="hamburger" onClick={toggleMenu}>
+    {isOpen ? <FaTimes size={25} /> : <FaBars size={25} />}
+  </div>
 
                 <ul className={`nav-links ${isOpen ? 'active' : ''}`}>
                     <li><a href="#home" onClick={toggleMenu}>Home</a></li>

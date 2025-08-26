@@ -98,8 +98,9 @@ body {
 .nav-container {
   display: flex;
   justify-content: space-between;
+  /* Space between logo and links */
   align-items: center;
-  padding: 20px 0;
+  padding: 15px 20px;
 }
 
 .logo {
@@ -473,7 +474,7 @@ body {
   }
 
   .nav-container {
-    flex-direction: column;
+    flex-direction: row;
   }
 
   .nav-links {
@@ -512,3 +513,42 @@ body {
   }
 }
 
+/* Hide hamburger on desktop */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  z-index: 1100;
+  /* stays above menu */
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+    color: var(--dark-color);
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 55px;
+    /* under navbar */
+    right: 0;
+    width: 250px;
+    height: calc(100vh - 70px);
+    background: white;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .nav-links li {
+    margin: 15px 0;
+  }
+
+  .nav-links.active {
+    transform: translateX(0);
+  }
+}
