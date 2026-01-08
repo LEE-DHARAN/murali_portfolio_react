@@ -1,11 +1,13 @@
-import React, { useState, useEffect } from 'react';
-import { FaBars, FaTimes } from 'react-icons/fa';
+import React, { useState, useEffect, useContext } from 'react';
+import { FaBars, FaTimes, FaSun, FaMoon } from 'react-icons/fa';
 import { FaGithub } from 'react-icons/fa';
+import { ThemeContext } from '../context/ThemeContext';
 
 
 function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
+    const { theme, toggleTheme } = useContext(ThemeContext) || {};
 
     const toggleMenu = () => {
         setIsOpen(!isOpen);
@@ -27,14 +29,25 @@ function Navbar() {
     return (
         <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
             <div className="container nav-container">
+
+                {/* Theme toggle and Hamburger Menu Button */}
+                <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                    <button
+                        className="theme-toggle"
+                        onClick={() => toggleTheme && toggleTheme()}
+                        aria-label="Toggle theme"
+                        title="Toggle dark / light"
+                    >
+                        {theme === 'dark' ? <FaSun size={16} /> : <FaMoon size={16} />}
+                    </button>
+                    <div className="hamburger" onClick={toggleMenu}>
+                        {isOpen ? <FaTimes size={25} /> : <FaBars size={25} />}
+                    </div>
+                </div>
                 <a href="#home" className="logo">
                     Murali Dharan<span>.</span>
                 </a>
 
-               {/* Hamburger Menu Button */}
-  <div className="hamburger" onClick={toggleMenu}>
-    {isOpen ? <FaTimes size={25} /> : <FaBars size={25} />}
-  </div>
 
                 <ul className={`nav-links ${isOpen ? 'active' : ''}`}>
                     <li><a href="#home" onClick={toggleMenu}>Home</a></li>
