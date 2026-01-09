@@ -64,7 +64,7 @@ function Navbar() {
                             rel="noopener noreferrer"
                             onClick={toggleMenu}
                         >
-                            <FaGithub size={25} /> {/* You can adjust size */}
+                            <FaGithub size={25} />
                         </a>
                     </li>
 
