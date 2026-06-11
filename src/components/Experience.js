@@ -22,14 +22,8 @@ function Experience() {
             period: 'Aug 2022 - Sep 2024',
             description: 'Established and managed a successful restaurant specializing in American, Middle Eastern and Indo-Chinese cuisine. Managed team of 4 staff, financial records, inventory, and operations in Chennai.',
             skills: ['Customer Satisfaction', 'Leadership', 'Business Management']
-        },
-        {
-            title: 'System Engineer',
-            company: 'HCL Technologies',
-            period: 'Aug 2016 - Sep 2017',
-            description: 'Managed development of enterprise web applications using ASP.NET MVC, achieving 100% SLA compliance.',
-            skills: ['ASP.NET MVC', 'Enterprise Applications', 'System Engineering']
         }
+     
     ];
     return (
         <section id="experience" className="section">
